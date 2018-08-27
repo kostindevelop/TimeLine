@@ -1,0 +1,24 @@
+PODS:
+  - KeychainSwift (11.0.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+
+DEPENDENCIES:
+  - KeychainSwift
+  - R.swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KeychainSwift
+    - R.swift
+    - R.swift.Library
+
+SPEC CHECKSUMS:
+  KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+
+PODFILE CHECKSUM: 665386eecf4e6d9fffdaea3effd592f0640e8dcb
+
+COCOAPODS: 1.5.3
