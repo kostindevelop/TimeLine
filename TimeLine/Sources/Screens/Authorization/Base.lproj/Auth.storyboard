@@ -99,6 +99,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btForgotPassword" destination="VaO-Zp-eKk" id="FkM-xl-YV6"/>
+                        <outlet property="btLogin" destination="SM8-XX-mWB" id="rSb-zA-O20"/>
+                        <outlet property="btRegistration" destination="fQJ-GO-tKK" id="k2g-mL-zfR"/>
+                        <outlet property="lbPassword" destination="iEQ-0G-eks" id="8TA-xC-QVA"/>
+                        <outlet property="lbSignIn" destination="Jrp-y0-30B" id="QrD-Tr-eVj"/>
+                        <outlet property="lbUserName" destination="ofo-GB-Ifs" id="dgk-Sf-h5s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

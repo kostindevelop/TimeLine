@@ -14,6 +14,8 @@
 		76A536762133DB74003978C2 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A536752133DB74003978C2 /* LoginScreen.swift */; };
 		76A5367B2133E026003978C2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A5367A2133E025003978C2 /* R.generated.swift */; };
 		76A5367E2133E087003978C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76A536802133E087003978C2 /* Localizable.strings */; };
+		76D9C28E21357B3A005599C1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28D21357B3A005599C1 /* Common.swift */; };
+		76D9C29021357C21005599C1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28F21357C21005599C1 /* Config.swift */; };
 		B54DB7D2F3349E549E0CC859 /* Pods_TimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15348E70034D469268B8C533 /* Pods_TimeLine.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,9 @@
 		76A5367A2133E025003978C2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		76A536832133E0DA003978C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		76A536842133E116003978C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		76D9C28D21357B3A005599C1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		76D9C28F21357C21005599C1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		76D9C29121358A57005599C1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +88,12 @@
 		76A536702133C80C003978C2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				76D9C294213593B8005599C1 /* Screens */,
+				76D9C2932135938D005599C1 /* Models */,
+				76D9C29221359386005599C1 /* Services */,
 				76A536772133DCB3003978C2 /* Utilities */,
-				76A536722133CFB1003978C2 /* Authorization */,
 				76A5365E2133C7B9003978C2 /* AppDelegate.swift */,
+				76D9C28F21357C21005599C1 /* Config.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -105,9 +113,9 @@
 		76A536722133CFB1003978C2 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				76A536622133C7B9003978C2 /* Auth.storyboard */,
-				76A536742133D08C003978C2 /* Registration */,
 				76A536732133D084003978C2 /* Login */,
+				76A536742133D08C003978C2 /* Registration */,
+				76A536622133C7B9003978C2 /* Auth.storyboard */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				76A536782133DCBA003978C2 /* Extension */,
+				76D9C28D21357B3A005599C1 /* Common.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -140,6 +149,28 @@
 			children = (
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		76D9C29221359386005599C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		76D9C2932135938D005599C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		76D9C294213593B8005599C1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				76A536722133CFB1003978C2 /* Authorization */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		BBBD2D0604F768495833E87C /* Pods */ = {
@@ -196,6 +227,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 76A536522133C7B9003978C2;
 			productRefGroup = 76A5365C2133C7B9003978C2 /* Products */;
@@ -281,7 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D9C28E21357B3A005599C1 /* Common.swift in Sources */,
 				76A5365F2133C7B9003978C2 /* AppDelegate.swift in Sources */,
+				76D9C29021357C21005599C1 /* Config.swift in Sources */,
 				76A536762133DB74003978C2 /* LoginScreen.swift in Sources */,
 				76A5367B2133E026003978C2 /* R.generated.swift in Sources */,
 			);
@@ -311,6 +345,7 @@
 			children = (
 				76A536832133E0DA003978C2 /* Base */,
 				76A536842133E116003978C2 /* en */,
+				76D9C29121358A57005599C1 /* ru */,
 			);
 			name = Localizable.strings;
 			path = ../../../../Documents;
@@ -323,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -370,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -383,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -424,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

@@ -71,8 +71,80 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 0 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    struct localizable {
+      /// Base translation: Login
+      /// 
+      /// Locales: Base, en, ru
+      static let authBtLogin = Rswift.StringResource(key: "auth.btLogin", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base", "en", "ru"], comment: nil)
+      /// Base translation: Registration
+      /// 
+      /// Locales: Base, en, ru
+      static let authBtRegistration = Rswift.StringResource(key: "auth.btRegistration", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base", "en", "ru"], comment: nil)
+      /// Base translation: SignIn
+      /// 
+      /// Locales: Base, en, ru
+      static let authLbSignIn = Rswift.StringResource(key: "auth.lbSignIn", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base", "en", "ru"], comment: nil)
+      /// Base translation: forgot password?
+      /// 
+      /// Locales: Base, en, ru
+      static let authBtForgotPassword = Rswift.StringResource(key: "auth.btForgotPassword", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base", "en", "ru"], comment: nil)
+      /// Base translation: password
+      /// 
+      /// Locales: Base, en, ru
+      static let authPassword = Rswift.StringResource(key: "auth.password", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base", "en", "ru"], comment: nil)
+      /// Base translation: user name
+      /// 
+      /// Locales: Base, en, ru
+      static let authLbUserName = Rswift.StringResource(key: "auth.lbUserName", tableName: "Localizable", bundle: R.hostingBundle, locales: ["Base", "en", "ru"], comment: nil)
+      
+      /// Base translation: Login
+      /// 
+      /// Locales: Base, en, ru
+      static func authBtLogin(_: Void = ()) -> String {
+        return NSLocalizedString("auth.btLogin", bundle: R.hostingBundle, value: "Login", comment: "")
+      }
+      
+      /// Base translation: Registration
+      /// 
+      /// Locales: Base, en, ru
+      static func authBtRegistration(_: Void = ()) -> String {
+        return NSLocalizedString("auth.btRegistration", bundle: R.hostingBundle, value: "Registration", comment: "")
+      }
+      
+      /// Base translation: SignIn
+      /// 
+      /// Locales: Base, en, ru
+      static func authLbSignIn(_: Void = ()) -> String {
+        return NSLocalizedString("auth.lbSignIn", bundle: R.hostingBundle, value: "SignIn", comment: "")
+      }
+      
+      /// Base translation: forgot password?
+      /// 
+      /// Locales: Base, en, ru
+      static func authBtForgotPassword(_: Void = ()) -> String {
+        return NSLocalizedString("auth.btForgotPassword", bundle: R.hostingBundle, value: "forgot password?", comment: "")
+      }
+      
+      /// Base translation: password
+      /// 
+      /// Locales: Base, en, ru
+      static func authPassword(_: Void = ()) -> String {
+        return NSLocalizedString("auth.password", bundle: R.hostingBundle, value: "password", comment: "")
+      }
+      
+      /// Base translation: user name
+      /// 
+      /// Locales: Base, en, ru
+      static func authLbUserName(_: Void = ()) -> String {
+        return NSLocalizedString("auth.lbUserName", bundle: R.hostingBundle, value: "user name", comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
