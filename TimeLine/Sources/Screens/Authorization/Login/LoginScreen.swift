@@ -19,6 +19,7 @@ class LoginScreen: UIViewController {
     @IBOutlet weak var btLogin: UIButton!
     @IBOutlet weak var btRegistration: UIButton!
     
+    
     // MARK: - LifeCikle
     
     override func viewDidLoad() {
@@ -26,7 +27,28 @@ class LoginScreen: UIViewController {
         localizeUI()
     }
     
+    
+     // MARK: - IBActuon
+    
+    @IBAction func tapBtForgotPassword(_ sender: UIButton) {
+    }
+    
+    @IBAction func tapBtLogin(_ sender: UIButton) {
+    }
+    
+    @IBAction func tapBtRegistration(_ sender: UIButton) {
+//        let storyboard = R.storyboard.auth()
+        let registrationVC = R.storyboard.auth.registrationScreen()
+        present(registrationVC!, animated: true, completion: nil)
+    }
+    
+    
     // MARK: - Function
+    
+    func configuredView() {
+        // TO DO
+        // configured UI element
+    }
     
     func localizeUI() {
         lbSignIn.text = Text.authLbSignIn()
@@ -36,7 +58,4 @@ class LoginScreen: UIViewController {
         btLogin.setTitle(Text.authBtLogin(), for: .normal)
         btRegistration.setTitle(Text.authBtRegistration(), for: .normal)
     }
-    
-    
-    
 }

@@ -16,6 +16,7 @@
 		76A5367E2133E087003978C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76A536802133E087003978C2 /* Localizable.strings */; };
 		76D9C28E21357B3A005599C1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28D21357B3A005599C1 /* Common.swift */; };
 		76D9C29021357C21005599C1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28F21357C21005599C1 /* Config.swift */; };
+		76D9C29621359AC0005599C1 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C29521359AC0005599C1 /* RegistrationScreen.swift */; };
 		B54DB7D2F3349E549E0CC859 /* Pods_TimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15348E70034D469268B8C533 /* Pods_TimeLine.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,10 +33,10 @@
 		76A536752133DB74003978C2 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		76A5367A2133E025003978C2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		76A536832133E0DA003978C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		76A536842133E116003978C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		76D9C28D21357B3A005599C1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		76D9C28F21357C21005599C1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		76D9C29121358A57005599C1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		76D9C29521359AC0005599C1 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +132,7 @@
 		76A536742133D08C003978C2 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				76D9C29521359AC0005599C1 /* RegistrationScreen.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -317,6 +319,7 @@
 				76A5365F2133C7B9003978C2 /* AppDelegate.swift in Sources */,
 				76D9C29021357C21005599C1 /* Config.swift in Sources */,
 				76A536762133DB74003978C2 /* LoginScreen.swift in Sources */,
+				76D9C29621359AC0005599C1 /* RegistrationScreen.swift in Sources */,
 				76A5367B2133E026003978C2 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,7 +347,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				76A536832133E0DA003978C2 /* Base */,
-				76A536842133E116003978C2 /* en */,
 				76D9C29121358A57005599C1 /* ru */,
 			);
 			name = Localizable.strings;
@@ -406,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -461,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
