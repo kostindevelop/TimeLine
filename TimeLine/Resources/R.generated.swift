@@ -245,14 +245,20 @@ struct _R: Rswift.Validatable {
       typealias InitialController = LoginScreen
       
       let bundle = R.hostingBundle
+      let loginScreen = StoryboardViewControllerResource<LoginScreen>(identifier: "loginScreen")
       let name = "Auth"
       let registrationScreen = StoryboardViewControllerResource<RegistrationScreen>(identifier: "registrationScreen")
+      
+      func loginScreen(_: Void = ()) -> LoginScreen? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: loginScreen)
+      }
       
       func registrationScreen(_: Void = ()) -> RegistrationScreen? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: registrationScreen)
       }
       
       static func validate() throws {
+        if _R.storyboard.auth().loginScreen() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginScreen' could not be loaded from storyboard 'Auth' as 'LoginScreen'.") }
         if _R.storyboard.auth().registrationScreen() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'registrationScreen' could not be loaded from storyboard 'Auth' as 'RegistrationScreen'.") }
       }
       

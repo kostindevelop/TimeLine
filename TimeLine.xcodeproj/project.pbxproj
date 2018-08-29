@@ -17,6 +17,8 @@
 		76D9C28E21357B3A005599C1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28D21357B3A005599C1 /* Common.swift */; };
 		76D9C29021357C21005599C1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28F21357C21005599C1 /* Config.swift */; };
 		76D9C29621359AC0005599C1 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C29521359AC0005599C1 /* RegistrationScreen.swift */; };
+		76FD49892136D954003BB095 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD49882136D954003BB095 /* AuthService.swift */; };
+		76FD498B2136E17E003BB095 /* AuthSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD498A2136E17E003BB095 /* AuthSwitcher.swift */; };
 		B54DB7D2F3349E549E0CC859 /* Pods_TimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15348E70034D469268B8C533 /* Pods_TimeLine.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		76D9C28F21357C21005599C1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		76D9C29121358A57005599C1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		76D9C29521359AC0005599C1 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
+		76FD49882136D954003BB095 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		76FD498A2136E17E003BB095 /* AuthSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSwitcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 		76D9C29221359386005599C1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				76FD49882136D954003BB095 /* AuthService.swift */,
+				76FD498A2136E17E003BB095 /* AuthSwitcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -317,12 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76FD498B2136E17E003BB095 /* AuthSwitcher.swift in Sources */,
 				76D9C28E21357B3A005599C1 /* Common.swift in Sources */,
 				76A5365F2133C7B9003978C2 /* AppDelegate.swift in Sources */,
 				76D9C29021357C21005599C1 /* Config.swift in Sources */,
 				76A536762133DB74003978C2 /* LoginScreen.swift in Sources */,
 				76D9C29621359AC0005599C1 /* RegistrationScreen.swift in Sources */,
 				76A5367B2133E026003978C2 /* R.generated.swift in Sources */,
+				76FD49892136D954003BB095 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +490,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UH5E4S62N6;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeLine/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ka.TimeLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -498,7 +509,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UH5E4S62N6;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeLine/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ka.TimeLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
