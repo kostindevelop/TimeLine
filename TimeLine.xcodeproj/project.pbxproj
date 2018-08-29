@@ -191,8 +191,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76A5366D2133C7BC003978C2 /* Build configuration list for PBXNativeTarget "TimeLine" */;
 			buildPhases = (
-				76A536792133DFC6003978C2 /* [CP] R.swift */,
 				847FB7AC06C78DF83394A655 /* [CP] Check Pods Manifest.lock */,
+				76A536792133DFC6003978C2 /* [CP] R.swift */,
 				76A536572133C7B9003978C2 /* Sources */,
 				76A536582133C7B9003978C2 /* Frameworks */,
 				76A536592133C7B9003978C2 /* Resources */,
@@ -263,11 +263,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TimeLine/Pods-TimeLine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
@@ -480,10 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UH5E4S62N6;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeLine/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ka.TimeLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -499,10 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UH5E4S62N6;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeLine/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ka.TimeLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

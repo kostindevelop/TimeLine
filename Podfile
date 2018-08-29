@@ -5,5 +5,6 @@ target 'TimeLine' do
 
   pod 'R.swift'
   pod 'KeychainSwift'
+  pod 'Alamofire'
 
 end
