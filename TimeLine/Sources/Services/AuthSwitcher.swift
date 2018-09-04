@@ -10,13 +10,15 @@ import UIKit
 
 class AuthSwitcher {
     
+    static let strLogedIn = "Logged In"
+    
     static func choiseRootVC() {
-        let loggedIn = UserDefaults.standard.bool(forKey: "Logged In")
-        UserDefaults.standard.set(false, forKey: "Logged In") // APPSTORE Delete
+        let loggedIn = UserDefaults.standard.bool(forKey: strLogedIn)
+        UserDefaults.standard.set(true, forKey: strLogedIn) // TODO AppStore Delete
         var rootVC: UIViewController
         
         if loggedIn {
-            rootVC = UIStoryboard.init(name: "Root", bundle: nil).instantiateViewController(withIdentifier: "startViewController")
+            rootVC = R.storyboard.timeLine.timeLineScreen()!
         } else {
             rootVC = R.storyboard.auth.loginScreen()!
         }

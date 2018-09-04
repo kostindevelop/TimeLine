@@ -17,6 +17,9 @@
 		76D9C28E21357B3A005599C1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28D21357B3A005599C1 /* Common.swift */; };
 		76D9C29021357C21005599C1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28F21357C21005599C1 /* Config.swift */; };
 		76D9C29621359AC0005599C1 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C29521359AC0005599C1 /* RegistrationScreen.swift */; };
+		76FCE068213EB2DA00CA57E9 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76FCE067213EB2DA00CA57E9 /* TimeLine.storyboard */; };
+		76FCE06B213EB33A00CA57E9 /* TimeLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FCE06A213EB33A00CA57E9 /* TimeLineController.swift */; };
+		76FCE06E213EB6C600CA57E9 /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FCE06D213EB6C600CA57E9 /* TimeLineCell.swift */; };
 		76FD49892136D954003BB095 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD49882136D954003BB095 /* AuthService.swift */; };
 		76FD498B2136E17E003BB095 /* AuthSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD498A2136E17E003BB095 /* AuthSwitcher.swift */; };
 		B54DB7D2F3349E549E0CC859 /* Pods_TimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15348E70034D469268B8C533 /* Pods_TimeLine.framework */; };
@@ -39,6 +42,9 @@
 		76D9C28F21357C21005599C1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		76D9C29121358A57005599C1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		76D9C29521359AC0005599C1 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
+		76FCE067213EB2DA00CA57E9 /* TimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
+		76FCE06A213EB33A00CA57E9 /* TimeLineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineController.swift; sourceTree = "<group>"; };
+		76FCE06D213EB6C600CA57E9 /* TimeLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
 		76FD49882136D954003BB095 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		76FD498A2136E17E003BB095 /* AuthSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSwitcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,27 +124,27 @@
 		76A536722133CFB1003978C2 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				76A536732133D084003978C2 /* Login */,
-				76A536742133D08C003978C2 /* Registration */,
+				76A536732133D084003978C2 /* LoginController */,
+				76A536742133D08C003978C2 /* RegistrationController */,
 				76A536622133C7B9003978C2 /* Auth.storyboard */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
 		};
-		76A536732133D084003978C2 /* Login */ = {
+		76A536732133D084003978C2 /* LoginController */ = {
 			isa = PBXGroup;
 			children = (
 				76A536752133DB74003978C2 /* LoginScreen.swift */,
 			);
-			path = Login;
+			path = LoginController;
 			sourceTree = "<group>";
 		};
-		76A536742133D08C003978C2 /* Registration */ = {
+		76A536742133D08C003978C2 /* RegistrationController */ = {
 			isa = PBXGroup;
 			children = (
 				76D9C29521359AC0005599C1 /* RegistrationScreen.swift */,
 			);
-			path = Registration;
+			path = RegistrationController;
 			sourceTree = "<group>";
 		};
 		76A536772133DCB3003978C2 /* Utilities */ = {
@@ -176,9 +182,36 @@
 		76D9C294213593B8005599C1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				76FCE066213EB29100CA57E9 /* TimeLineScreen */,
 				76A536722133CFB1003978C2 /* Authorization */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		76FCE066213EB29100CA57E9 /* TimeLineScreen */ = {
+			isa = PBXGroup;
+			children = (
+				76FCE069213EB30000CA57E9 /* TimeLineController */,
+				76FCE06C213EB6AD00CA57E9 /* CustomCell */,
+				76FCE067213EB2DA00CA57E9 /* TimeLine.storyboard */,
+			);
+			path = TimeLineScreen;
+			sourceTree = "<group>";
+		};
+		76FCE069213EB30000CA57E9 /* TimeLineController */ = {
+			isa = PBXGroup;
+			children = (
+				76FCE06A213EB33A00CA57E9 /* TimeLineController.swift */,
+			);
+			path = TimeLineController;
+			sourceTree = "<group>";
+		};
+		76FCE06C213EB6AD00CA57E9 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				76FCE06D213EB6C600CA57E9 /* TimeLineCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		BBBD2D0604F768495833E87C /* Pods */ = {
@@ -253,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76A536692133C7BC003978C2 /* LaunchScreen.storyboard in Resources */,
+				76FCE068213EB2DA00CA57E9 /* TimeLine.storyboard in Resources */,
 				76A5367E2133E087003978C2 /* Localizable.strings in Resources */,
 				76A536662133C7BC003978C2 /* Assets.xcassets in Resources */,
 				76A536642133C7B9003978C2 /* Auth.storyboard in Resources */,
@@ -272,12 +306,16 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -327,9 +365,11 @@
 				76D9C28E21357B3A005599C1 /* Common.swift in Sources */,
 				76A5365F2133C7B9003978C2 /* AppDelegate.swift in Sources */,
 				76D9C29021357C21005599C1 /* Config.swift in Sources */,
+				76FCE06B213EB33A00CA57E9 /* TimeLineController.swift in Sources */,
 				76A536762133DB74003978C2 /* LoginScreen.swift in Sources */,
 				76D9C29621359AC0005599C1 /* RegistrationScreen.swift in Sources */,
 				76A5367B2133E026003978C2 /* R.generated.swift in Sources */,
+				76FCE06E213EB6C600CA57E9 /* TimeLineCell.swift in Sources */,
 				76FD49892136D954003BB095 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

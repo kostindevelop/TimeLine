@@ -41,8 +41,11 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `TimeCell`.
+    static let timeCell: Rswift.ReuseIdentifier<TimeLineCell> = Rswift.ReuseIdentifier(identifier: "TimeCell")
+    
     fileprivate init() {}
   }
   
@@ -51,12 +54,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
     /// Storyboard `Auth`.
     static let auth = _R.storyboard.auth()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
+    /// Storyboard `TimeLine`.
+    static let timeLine = _R.storyboard.timeLine()
     
     /// `UIStoryboard(name: "Auth", bundle: ...)`
     static func auth(_: Void = ()) -> UIKit.UIStoryboard {
@@ -66,6 +71,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
+    }
+    
+    /// `UIStoryboard(name: "TimeLine", bundle: ...)`
+    static func timeLine(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.timeLine)
     }
     
     fileprivate init() {}
@@ -239,6 +249,7 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try auth.validate()
+      try timeLine.validate()
     }
     
     struct auth: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -270,6 +281,24 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
+      
+      fileprivate init() {}
+    }
+    
+    struct timeLine: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UITabBarController
+      
+      let bundle = R.hostingBundle
+      let name = "TimeLine"
+      let timeLineScreen = StoryboardViewControllerResource<UIKit.UITabBarController>(identifier: "timeLineScreen")
+      
+      func timeLineScreen(_: Void = ()) -> UIKit.UITabBarController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: timeLineScreen)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.timeLine().timeLineScreen() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'timeLineScreen' could not be loaded from storyboard 'TimeLine' as 'UIKit.UITabBarController'.") }
+      }
       
       fileprivate init() {}
     }
