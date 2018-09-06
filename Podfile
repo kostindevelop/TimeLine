@@ -7,5 +7,6 @@ target 'TimeLine' do
   pod 'KeychainSwift'
   pod 'Alamofire'
   pod 'RealmSwift'
+  pod 'SkyFloatingLabelTextField'
 
 end

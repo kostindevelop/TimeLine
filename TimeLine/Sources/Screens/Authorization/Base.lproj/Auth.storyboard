@@ -39,6 +39,9 @@
                                         <state key="normal" title="SIGN IN">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapBtSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dnv-28-b45"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOO-2o-4uG">
                                         <rect key="frame" x="207" y="0.0" width="207" height="60"/>
@@ -46,6 +49,9 @@
                                         <state key="normal" title="SIGN UP">
                                             <color key="titleColor" red="0.6959399288" green="0.6959399288" blue="0.6959399288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapBtSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x77-RW-irt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -61,7 +67,7 @@
                                     <constraint firstItem="aOO-2o-4uG" firstAttribute="leading" secondItem="faf-CH-Yf3" secondAttribute="trailing" id="ykN-h1-q06"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b1G-Hb-Q1r">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b1G-Hb-Q1r">
                                 <rect key="frame" x="20.666666666666657" y="279" width="372.66666666666674" height="194"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hak-ly-v2a">
@@ -100,6 +106,9 @@
                                         <state key="normal" title="Forgot password?">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapBtForgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W61-pB-A7g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -112,7 +121,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mkx-gp-AeH">
-                                <rect key="frame" x="20.666666666666657" y="563" width="372.66666666666674" height="110"/>
+                                <rect key="frame" x="20.666666666666657" y="503" width="372.66666666666674" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIy-Wh-KaA">
                                         <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="50"/>
@@ -123,6 +132,9 @@
                                         <state key="normal" title="SIGN IN">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapBtLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c0M-9T-mwa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZw-Si-BfH">
                                         <rect key="frame" x="0.0" y="65" width="372.66666666666669" height="45"/>
@@ -143,7 +155,7 @@
                             <constraint firstItem="OKK-q0-vCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L2E-7n-CWM"/>
                             <constraint firstItem="0XS-IU-cPJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L8F-tD-37Z"/>
                             <constraint firstItem="Mkx-gp-AeH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SjR-bR-m6P"/>
-                            <constraint firstItem="Mkx-gp-AeH" firstAttribute="top" secondItem="b1G-Hb-Q1r" secondAttribute="bottom" constant="90" id="V8d-yd-f6o"/>
+                            <constraint firstItem="Mkx-gp-AeH" firstAttribute="top" secondItem="b1G-Hb-Q1r" secondAttribute="bottom" constant="30" id="V8d-yd-f6o"/>
                             <constraint firstItem="b1G-Hb-Q1r" firstAttribute="width" secondItem="0XS-IU-cPJ" secondAttribute="width" multiplier="0.9" id="YUc-1X-bJl"/>
                             <constraint firstItem="OKK-q0-vCB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YXJ-gh-Pbg"/>
                             <constraint firstItem="dv0-zo-ISM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ZkI-GP-cHi"/>

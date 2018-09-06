@@ -9,12 +9,14 @@ PODS:
   - Realm/Headers (3.7.6)
   - RealmSwift (3.7.6):
     - Realm (= 3.7.6)
+  - SkyFloatingLabelTextField (3.5.1)
 
 DEPENDENCIES:
   - Alamofire
   - KeychainSwift
   - R.swift
   - RealmSwift
+  - SkyFloatingLabelTextField
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -24,6 +26,7 @@ SPEC REPOS:
     - R.swift.Library
     - Realm
     - RealmSwift
+    - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
   RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
+  SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
 
-PODFILE CHECKSUM: 9809e14742d559a1531245e67c162af778d8d4c3
+PODFILE CHECKSUM: 1e867d21c37f817a0adb0c0b2cd828793e6defb4
 
 COCOAPODS: 1.5.3
