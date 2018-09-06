@@ -10,11 +10,11 @@ import UIKit
 
 class AuthSwitcher {
     
-    static let strLogedIn = "Logged In"
+    static let keyLogedIn = "Logged In"
     
     static func choiseRootVC() {
-        let loggedIn = UserDefaults.standard.bool(forKey: strLogedIn)
-        UserDefaults.standard.set(true, forKey: strLogedIn) // TODO AppStore Delete
+        let loggedIn = UserDefaults.standard.bool(forKey: keyLogedIn)
+        UserDefaults.standard.set(false, forKey: keyLogedIn) // TODO AppStore Delete
         var rootVC: UIViewController
         
         if loggedIn {

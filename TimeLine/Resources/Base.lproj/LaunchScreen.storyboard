@@ -17,21 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Line" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ki9-v8-lHS">
-                                <rect key="frame" x="87" y="283.5" width="200" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="szI-OE-5ka">
+                                <rect key="frame" x="57" y="274" width="260" height="118"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="67T-nb-c3j"/>
-                                    <constraint firstAttribute="height" constant="100" id="QUw-cG-xEj"/>
+                                    <constraint firstAttribute="height" constant="118" id="37A-3d-h6Z"/>
+                                    <constraint firstAttribute="width" constant="260" id="Zxc-vv-pbE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.95686274510000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ki9-v8-lHS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WTd-cc-aU1"/>
-                            <constraint firstItem="ki9-v8-lHS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nMr-Dg-fNY"/>
+                            <constraint firstItem="szI-OE-5ka" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cBv-zZ-SM7"/>
+                            <constraint firstItem="szI-OE-5ka" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rI9-4U-J36"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,4 +38,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo_black" width="260" height="118"/>
+    </resources>
 </document>

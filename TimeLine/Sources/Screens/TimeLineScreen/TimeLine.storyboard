@@ -12,7 +12,6 @@
         <!--View Controller-->
         <scene sceneID="Ulb-6e-lix">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BaK-1u-aDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="MhV-29-ehZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UBu-I1-Pjq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -34,6 +33,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="i6n-gO-vGc"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaK-1u-aDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1321" y="112"/>
         </scene>
@@ -61,10 +61,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btj-d0-qch">
-                                                    <rect key="frame" x="234" y="0.0" width="16" height="44"/>
+                                                    <rect key="frame" x="245" y="0.0" width="5" height="44"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Am0-Bh-Vom">
-                                                            <rect key="frame" x="-4.5" y="9" width="25" height="25"/>
+                                                            <rect key="frame" x="-10" y="9" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="MVF-St-pey"/>
                                                                 <constraint firstAttribute="width" constant="25" id="cqq-T9-oBX"/>
@@ -74,12 +74,12 @@
                                                     <color key="backgroundColor" red="0.17254901959999999" green="0.74901960779999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="Am0-Bh-Vom" firstAttribute="centerY" secondItem="btj-d0-qch" secondAttribute="centerY" id="Kk8-iQ-won"/>
-                                                        <constraint firstAttribute="width" constant="16" id="RIt-Fr-lFX"/>
+                                                        <constraint firstAttribute="width" constant="5" id="RIt-Fr-lFX"/>
                                                         <constraint firstItem="Am0-Bh-Vom" firstAttribute="centerX" secondItem="btj-d0-qch" secondAttribute="centerX" id="bFT-Xd-eUi"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сдать отчет" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oet-I3-Z4T">
-                                                    <rect key="frame" x="10" y="10" width="204" height="24"/>
+                                                    <rect key="frame" x="10" y="10" width="215" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

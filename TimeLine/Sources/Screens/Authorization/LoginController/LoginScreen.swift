@@ -12,13 +12,17 @@ class LoginScreen: UIViewController {
     
     // MARK: - IBOutlet
     
-    @IBOutlet weak var lbSignIn: UILabel!
-    @IBOutlet weak var lbUserName: UILabel!
+    
+    @IBOutlet weak var btSignUp: UIButton!
+    @IBOutlet weak var btSignIn: UIButton!
+    @IBOutlet weak var lbEmail: UILabel!
+    @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var lbPassword: UILabel!
+    @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btForgotPassword: UIButton!
     @IBOutlet weak var btLogin: UIButton!
-    @IBOutlet weak var btRegistration: UIButton!
-    
+    @IBOutlet weak var btLoginWithFacebook: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     // MARK: - LifeCikle
     
@@ -43,19 +47,19 @@ class LoginScreen: UIViewController {
     }
     
     
+    
     // MARK: - Function
     
     func configuredView() {
-        // TO DO
-        // configured UI element
+        // TO DO Configured UI elements
     }
     
     func localizeUI() {
-        lbSignIn.text = Text.authLbSignIn()
-        lbUserName.text = Text.authLbUserName()
-        lbPassword.text = Text.authPassword()
-        btForgotPassword.setTitle(Text.authBtForgotPassword(), for: .normal)
-        btLogin.setTitle(Text.authBtLogin(), for: .normal)
-        btRegistration.setTitle(Text.authBtRegistration(), for: .normal)
+//        lbSignIn.text = Text.authLbSignIn()
+//        lbUserName.text = Text.authLbUserName()
+//        lbPassword.text = Text.authPassword()
+//        btForgotPassword.setTitle(Text.authBtForgotPassword(), for: .normal)
+//        btLogin.setTitle(Text.authBtLogin(), for: .normal)
+//        tapBtRegistration.setTitle(Text.authBtRegistration(), for: .normal)
     }
 }

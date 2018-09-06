@@ -31,8 +31,30 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
+    /// Image `Logo_black`.
+    static let logo_black = Rswift.ImageResource(bundle: R.hostingBundle, name: "Logo_black")
+    /// Image `Logo`.
+    static let logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "Logo")
+    /// Image `register_back`.
+    static let register_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "register_back")
+    
+    /// `UIImage(named: "Logo", bundle: ..., traitCollection: ...)`
+    static func logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logo, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "Logo_black", bundle: ..., traitCollection: ...)`
+    static func logo_black(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logo_black, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "register_back", bundle: ..., traitCollection: ...)`
+    static func register_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.register_back, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -250,6 +272,7 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try auth.validate()
       try timeLine.validate()
+      try launchScreen.validate()
     }
     
     struct auth: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -269,6 +292,8 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "Logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Logo' is used in storyboard 'Auth', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "register_back") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'register_back' is used in storyboard 'Auth', but couldn't be loaded.") }
         if _R.storyboard.auth().loginScreen() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginScreen' could not be loaded from storyboard 'Auth' as 'LoginScreen'.") }
         if _R.storyboard.auth().registrationScreen() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'registrationScreen' could not be loaded from storyboard 'Auth' as 'RegistrationScreen'.") }
       }
@@ -276,11 +301,15 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
+    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UIViewController
       
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "Logo_black") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Logo_black' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }

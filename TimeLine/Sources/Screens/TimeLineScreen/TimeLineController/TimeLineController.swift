@@ -9,7 +9,7 @@
 import UIKit
 
 class TimeLineController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var selectedIndex: [Int] = []
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         cell.backgroundColor = nil
         cell.lbDateTimeLine.text = String(indexPath.row)
-        cell.lbDescriptionTimeLine.text = "task description"
+        cell.lbDescriptionTimeLine.text = "task name"
         cell.viewCircleTimeLine.backgroundColor = nil
         
         return cell
@@ -40,8 +40,27 @@ extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let currentCell = tableView.cellForRow(at: indexPath) as! TimeLineCell
         currentCell.viewCircleTimeLine.layer.cornerRadius = currentCell.viewCircleTimeLine.frame.width / 2
-        currentCell.viewCircleTimeLine.backgroundColor = .green
-        selectedIndex.append(indexPath.row)
+        if selectedIndex.count == 0 {
+            selectedIndex.append(indexPath.row)
+            currentCell.viewCircleTimeLine.layer.cornerRadius = currentCell.viewCircleTimeLine.frame.width / 2
+            currentCell.viewCircleTimeLine.backgroundColor = .green
+        } else {
+            for index in selectedIndex {
+                if index == indexPath.row {
+                    guard let num = selectedIndex.index(of: index) else { return }
+                    selectedIndex.remove(at: num)
+                    currentCell.viewCircleTimeLine.backgroundColor = nil
+                } else {
+                    selectedIndex.append(indexPath.row)
+                    currentCell.viewCircleTimeLine.backgroundColor = .green
+                    break
+                }
+                print("Thist INDEX - \(index)")
+                print("Thist ARR - \(selectedIndex)")
+            }
+        }
+        //        currentCell.viewCircleTimeLine.backgroundColor = .green
+        //        selectedIndex.append(indexPath.row)
         print(selectedIndex)
         
     }
