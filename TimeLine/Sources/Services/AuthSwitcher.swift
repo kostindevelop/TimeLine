@@ -14,7 +14,6 @@ class AuthSwitcher {
     
     static func choiseRootVC() {
         let loggedIn = UserDefaults.standard.bool(forKey: keyLogedIn)
-        UserDefaults.standard.set(true, forKey: keyLogedIn) // TODO AppStore Delete
         var rootVC: UIViewController
         
         if loggedIn {
