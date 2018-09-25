@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		762502972154E9CB0064456E /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762502962154E9CB0064456E /* NotesController.swift */; };
 		76A5365F2133C7B9003978C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A5365E2133C7B9003978C2 /* AppDelegate.swift */; };
 		76A536642133C7B9003978C2 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A536622133C7B9003978C2 /* Auth.storyboard */; };
 		76A536662133C7BC003978C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A536652133C7BC003978C2 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		15348E70034D469268B8C533 /* Pods_TimeLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC25690E7FD14D65AB0FAFE /* Pods-TimeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeLine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeLine/Pods-TimeLine.debug.xcconfig"; sourceTree = "<group>"; };
 		63CA469703F85DFC0B54AC3F /* Pods-TimeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeLine.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeLine/Pods-TimeLine.release.xcconfig"; sourceTree = "<group>"; };
+		762502962154E9CB0064456E /* NotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
 		76A5365B2133C7B9003978C2 /* TimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A5365E2133C7B9003978C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76A536632133C7B9003978C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 				15348E70034D469268B8C533 /* Pods_TimeLine.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		762502952154E9900064456E /* NotesController */ = {
+			isa = PBXGroup;
+			children = (
+				762502962154E9CB0064456E /* NotesController.swift */,
+			);
+			path = NotesController;
 			sourceTree = "<group>";
 		};
 		76A536522133C7B9003978C2 = {
@@ -191,6 +201,7 @@
 		76FCE066213EB29100CA57E9 /* TimeLineScreen */ = {
 			isa = PBXGroup;
 			children = (
+				762502952154E9900064456E /* NotesController */,
 				76FCE069213EB30000CA57E9 /* TimeLineController */,
 				76FCE06C213EB6AD00CA57E9 /* CustomCell */,
 				76FCE067213EB2DA00CA57E9 /* TimeLine.storyboard */,
@@ -304,6 +315,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TimeLine/Pods-TimeLine-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ISTimeline/ISTimeline.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -313,6 +325,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISTimeline.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -366,6 +379,7 @@
 				76FD498B2136E17E003BB095 /* AuthSwitcher.swift in Sources */,
 				76D9C28E21357B3A005599C1 /* Common.swift in Sources */,
 				76A5365F2133C7B9003978C2 /* AppDelegate.swift in Sources */,
+				762502972154E9CB0064456E /* NotesController.swift in Sources */,
 				76D9C29021357C21005599C1 /* Config.swift in Sources */,
 				76FCE06B213EB33A00CA57E9 /* TimeLineController.swift in Sources */,
 				76A536762133DB74003978C2 /* LoginScreen.swift in Sources */,
@@ -532,7 +546,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UH5E4S62N6;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeLine/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ka.TimeLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -548,7 +565,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UH5E4S62N6;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeLine/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ka.TimeLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

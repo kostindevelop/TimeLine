@@ -42,6 +42,7 @@ class LoginScreen: UIViewController {
         tfieldConfirmPass.textColor = .white
         tfieldConfirmPass.lineColor = .white
         tfieldConfirmPass.titleColor = .white
+        tfieldConfirmPass.isSecureTextEntry = true
         view.addSubview(tfieldConfirmPass)
     }
     
@@ -89,6 +90,7 @@ class LoginScreen: UIViewController {
         tfieldPassword.textColor = .white
         tfieldPassword.lineColor = .white
         tfieldPassword.titleColor = .white
+        tfieldPassword.isSecureTextEntry = true
         view.addSubview(tfieldPassword)
         
         self.btSignIn.titleLabel?.textColor = .red
@@ -106,12 +108,12 @@ class LoginScreen: UIViewController {
     func configuredRegistrationButton() {
         if btSignInTap {
             self.btSignUp.titleLabel?.textColor = .gray
-            self.btLogin.titleLabel?.text = "SignIn"
+            self.btLogin.titleLabel?.text = "Sign In"
             self.tfieldConfirmPass.isHidden = true
         } else {
             self.btSignIn.titleLabel?.textColor = .gray
             self.btSignUp.titleLabel?.textColor = .white
-            self.btLogin.titleLabel?.text = "SignUp"
+            self.btLogin.titleLabel?.text = "Sign Up"
             self.tfieldConfirmPass.isHidden = false
         }
     }

@@ -40,24 +40,24 @@ extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let currentCell = tableView.cellForRow(at: indexPath) as! TimeLineCell
         currentCell.viewCircleTimeLine.layer.cornerRadius = currentCell.viewCircleTimeLine.frame.width / 2
-        if selectedIndex.count == 0 {
+        currentCell.viewCircleTimeLine.backgroundColor = .green
+        if selectedIndex.isEmpty {
             selectedIndex.append(indexPath.row)
-            currentCell.viewCircleTimeLine.layer.cornerRadius = currentCell.viewCircleTimeLine.frame.width / 2
-            currentCell.viewCircleTimeLine.backgroundColor = .green
         } else {
-            for index in selectedIndex {
-                if index == indexPath.row {
-                    guard let num = selectedIndex.index(of: index) else { return }
+            var element = self.selectedIndex.index(of: indexPath.row)
+                if self.selectedIndex == indexPath.row { //доделать поиск елемента в массиве на совподение
+                    guard let num = selectedIndex.index(of: indexPath.row) else { return }
                     selectedIndex.remove(at: num)
                     currentCell.viewCircleTimeLine.backgroundColor = nil
+                    
                 } else {
                     selectedIndex.append(indexPath.row)
                     currentCell.viewCircleTimeLine.backgroundColor = .green
                     break
                 }
+                self.tableView.reloadData()
                 print("Thist INDEX - \(index)")
                 print("Thist ARR - \(selectedIndex)")
-            }
         }
         //        currentCell.viewCircleTimeLine.backgroundColor = .green
         //        selectedIndex.append(indexPath.row)
