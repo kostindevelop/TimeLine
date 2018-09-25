@@ -35,7 +35,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qsO-Ew-M7u"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="i6n-gO-vGc"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="i6n-gO-vGc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaK-1u-aDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,7 +135,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tcF-0j-Hu8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="A3L-qT-5pm"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="A3L-qT-5pm"/>
                     <connections>
                         <outlet property="tableView" destination="bKq-59-f5h" id="KbZ-lj-oEf"/>
                     </connections>

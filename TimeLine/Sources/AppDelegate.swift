@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UserDefaults.standard.set(true, forKey: "Logged In") // TODO AppStore Delete
             AuthSwitcher.choiseRootVC()
         return true
     }

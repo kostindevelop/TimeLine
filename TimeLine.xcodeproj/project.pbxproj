@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		762502972154E9CB0064456E /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762502962154E9CB0064456E /* NotesController.swift */; };
+		764B05D6215A2439001F14A8 /* Array-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B05D5215A2439001F14A8 /* Array-Extension.swift */; };
 		76A5365F2133C7B9003978C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A5365E2133C7B9003978C2 /* AppDelegate.swift */; };
 		76A536642133C7B9003978C2 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A536622133C7B9003978C2 /* Auth.storyboard */; };
 		76A536662133C7BC003978C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A536652133C7BC003978C2 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		1DC25690E7FD14D65AB0FAFE /* Pods-TimeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeLine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeLine/Pods-TimeLine.debug.xcconfig"; sourceTree = "<group>"; };
 		63CA469703F85DFC0B54AC3F /* Pods-TimeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeLine.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeLine/Pods-TimeLine.release.xcconfig"; sourceTree = "<group>"; };
 		762502962154E9CB0064456E /* NotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
+		764B05D5215A2439001F14A8 /* Array-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array-Extension.swift"; sourceTree = "<group>"; };
 		76A5365B2133C7B9003978C2 /* TimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A5365E2133C7B9003978C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76A536632133C7B9003978C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,13 @@
 				762502962154E9CB0064456E /* NotesController.swift */,
 			);
 			path = NotesController;
+			sourceTree = "<group>";
+		};
+		764B05D7215A4AB4001F14A8 /* AddPointTimeLine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddPointTimeLine;
 			sourceTree = "<group>";
 		};
 		76A536522133C7B9003978C2 = {
@@ -169,6 +178,7 @@
 		76A536782133DCBA003978C2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				764B05D5215A2439001F14A8 /* Array-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -192,6 +202,7 @@
 		76D9C294213593B8005599C1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				764B05D7215A4AB4001F14A8 /* AddPointTimeLine */,
 				76FCE066213EB29100CA57E9 /* TimeLineScreen */,
 				76A536722133CFB1003978C2 /* Authorization */,
 			);
@@ -385,6 +396,7 @@
 				76A536762133DB74003978C2 /* LoginScreen.swift in Sources */,
 				76D9C29621359AC0005599C1 /* RegistrationScreen.swift in Sources */,
 				76A5367B2133E026003978C2 /* R.generated.swift in Sources */,
+				764B05D6215A2439001F14A8 /* Array-Extension.swift in Sources */,
 				76FCE06E213EB6C600CA57E9 /* TimeLineCell.swift in Sources */,
 				76FD49892136D954003BB095 /* AuthService.swift in Sources */,
 			);

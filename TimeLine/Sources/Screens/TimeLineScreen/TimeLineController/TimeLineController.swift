@@ -14,13 +14,15 @@ class TimeLineController: UIViewController {
     var selectedIndex: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.separatorStyle = .none
         tableView.backgroundColor = nil
     }
+    
 }
 
+
 extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 24
     }
@@ -29,10 +31,13 @@ extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.timeCell, for: indexPath) else { fatalError() }
         cell.selectionStyle = .none
         cell.backgroundColor = nil
-        cell.lbDateTimeLine.text = String(indexPath.row)
+        cell.lbDateTimeLine.text = String(indexPath.row + 1)
         cell.lbDescriptionTimeLine.text = "task name"
         cell.viewCircleTimeLine.backgroundColor = nil
-        
+        if selectedIndex.contains(indexPath.row) {
+            cell.viewCircleTimeLine.backgroundColor = .green
+            cell.viewCircleTimeLine.layer.cornerRadius = cell.viewCircleTimeLine.frame.width / 2
+        }
         return cell
     }
     
@@ -40,31 +45,25 @@ extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let currentCell = tableView.cellForRow(at: indexPath) as! TimeLineCell
         currentCell.viewCircleTimeLine.layer.cornerRadius = currentCell.viewCircleTimeLine.frame.width / 2
-        currentCell.viewCircleTimeLine.backgroundColor = .green
         if selectedIndex.isEmpty {
             selectedIndex.append(indexPath.row)
+            currentCell.viewCircleTimeLine.backgroundColor = .green
         } else {
-            var element = self.selectedIndex.index(of: indexPath.row)
-                if self.selectedIndex == indexPath.row { //доделать поиск елемента в массиве на совподение
-                    guard let num = selectedIndex.index(of: indexPath.row) else { return }
-                    selectedIndex.remove(at: num)
-                    currentCell.viewCircleTimeLine.backgroundColor = nil
-                    
-                } else {
-                    selectedIndex.append(indexPath.row)
-                    currentCell.viewCircleTimeLine.backgroundColor = .green
-                    break
-                }
-                self.tableView.reloadData()
-                print("Thist INDEX - \(index)")
-                print("Thist ARR - \(selectedIndex)")
+            print("Index array - \(selectedIndex)")
+            if self.selectedIndex.contains(indexPath.row) {
+                print("Index array - \(selectedIndex)")
+                let element = self.selectedIndex.index(of: indexPath.row)
+                selectedIndex.remove(at: element!)
+                print("Index array - \(selectedIndex)")
+                currentCell.viewCircleTimeLine.backgroundColor = nil
+            } else {
+                selectedIndex.append(indexPath.row)
+                currentCell.viewCircleTimeLine.backgroundColor = .green
+            }
+            self.tableView.reloadData()
+            print("Thist INDEX - \(String(describing: self.selectedIndex.index(of: indexPath.row)))")
+            print("Index array - \(selectedIndex)")
         }
-        //        currentCell.viewCircleTimeLine.backgroundColor = .green
-        //        selectedIndex.append(indexPath.row)
-        print(selectedIndex)
-        
     }
-    
-    
     
 }
