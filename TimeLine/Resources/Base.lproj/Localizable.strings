@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  TimeLine
+
+  Created by UT on 27.08.2018.
+  Copyright © 2018 kostindevelop. All rights reserved.
+*/
+
+"auth.lbSignIn" = "SignIn";
+"auth.lbUserName" = "user name";
+"auth.password" = "password";
+"auth.btForgotPassword" = "forgot password?";
+"auth.btLogin" = "Login";
+"auth.btRegistration" = "Registration";
+
+"reg.lbSignUp" = "SignUp";
+"reg.lbEmail" = "e-mail";
+"reg.lbUserName" = "user name";
+"reg.lbPassword" = "password";
+"reg.lbConfirmPassword" = "confirm password";
+"reg.btRegistration" = "Registration";
