@@ -42,6 +42,11 @@ extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+//        let storyboard = R.storyboard.auth()
+        //        let registrationVC = R.storyboard.auth.registrationScreen()
+        //        present(registrationVC!, animated: true, completion: nil)
+        
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let currentCell = tableView.cellForRow(at: indexPath) as! TimeLineCell
         currentCell.viewCircleTimeLine.layer.cornerRadius = currentCell.viewCircleTimeLine.frame.width / 2
