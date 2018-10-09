@@ -15,7 +15,6 @@
 		76A536692133C7BC003978C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A536672133C7BC003978C2 /* LaunchScreen.storyboard */; };
 		76A536762133DB74003978C2 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A536752133DB74003978C2 /* LoginScreen.swift */; };
 		76A5367B2133E026003978C2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A5367A2133E025003978C2 /* R.generated.swift */; };
-		76A5367E2133E087003978C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76A536802133E087003978C2 /* Localizable.strings */; };
 		76D9C28E21357B3A005599C1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28D21357B3A005599C1 /* Common.swift */; };
 		76D9C29021357C21005599C1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C28F21357C21005599C1 /* Config.swift */; };
 		76D9C29621359AC0005599C1 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9C29521359AC0005599C1 /* RegistrationScreen.swift */; };
@@ -24,6 +23,7 @@
 		76FCE06E213EB6C600CA57E9 /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FCE06D213EB6C600CA57E9 /* TimeLineCell.swift */; };
 		76FD49892136D954003BB095 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD49882136D954003BB095 /* AuthService.swift */; };
 		76FD498B2136E17E003BB095 /* AuthSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD498A2136E17E003BB095 /* AuthSwitcher.swift */; };
+		7BC15F20216CCFE800167954 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BC15F1E216CCFE700167954 /* Localizable.strings */; };
 		B54DB7D2F3349E549E0CC859 /* Pods_TimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15348E70034D469268B8C533 /* Pods_TimeLine.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,16 +41,15 @@
 		76A5366A2133C7BC003978C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76A536752133DB74003978C2 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		76A5367A2133E025003978C2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		76A536832133E0DA003978C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = ../Project/TimeLine/TimeLine/Resources/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		76D9C28D21357B3A005599C1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		76D9C28F21357C21005599C1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		76D9C29121358A57005599C1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ../Project/TimeLine/TimeLine/Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		76D9C29521359AC0005599C1 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		76FCE067213EB2DA00CA57E9 /* TimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
 		76FCE06A213EB33A00CA57E9 /* TimeLineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineController.swift; sourceTree = "<group>"; };
 		76FCE06D213EB6C600CA57E9 /* TimeLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
 		76FD49882136D954003BB095 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		76FD498A2136E17E003BB095 /* AuthSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSwitcher.swift; sourceTree = "<group>"; };
+		7BC15F1F216CCFE700167954 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +134,7 @@
 				76A536652133C7BC003978C2 /* Assets.xcassets */,
 				76A536672133C7BC003978C2 /* LaunchScreen.storyboard */,
 				76A5366A2133C7BC003978C2 /* Info.plist */,
-				76A536802133E087003978C2 /* Localizable.strings */,
+				7BC15F1E216CCFE700167954 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -307,9 +306,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC15F20216CCFE800167954 /* Localizable.strings in Resources */,
 				76A536692133C7BC003978C2 /* LaunchScreen.storyboard in Resources */,
 				76FCE068213EB2DA00CA57E9 /* TimeLine.storyboard in Resources */,
-				76A5367E2133E087003978C2 /* Localizable.strings in Resources */,
 				76A536662133C7BC003978C2 /* Assets.xcassets in Resources */,
 				76A536642133C7B9003978C2 /* Auth.storyboard in Resources */,
 			);
@@ -421,14 +420,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		76A536802133E087003978C2 /* Localizable.strings */ = {
+		7BC15F1E216CCFE700167954 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76A536832133E0DA003978C2 /* Base */,
-				76D9C29121358A57005599C1 /* ru */,
+				7BC15F1F216CCFE700167954 /* ru */,
 			);
 			name = Localizable.strings;
-			path = ../../../../Documents;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
