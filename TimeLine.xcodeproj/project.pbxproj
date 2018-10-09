@@ -24,6 +24,7 @@
 		76FD49892136D954003BB095 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD49882136D954003BB095 /* AuthService.swift */; };
 		76FD498B2136E17E003BB095 /* AuthSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD498A2136E17E003BB095 /* AuthSwitcher.swift */; };
 		7BC15F20216CCFE800167954 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BC15F1E216CCFE700167954 /* Localizable.strings */; };
+		7BD41C0A216CD663005A8A10 /* AddNewTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD41C09216CD663005A8A10 /* AddNewTaskScreen.swift */; };
 		B54DB7D2F3349E549E0CC859 /* Pods_TimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15348E70034D469268B8C533 /* Pods_TimeLine.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		76FD49882136D954003BB095 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		76FD498A2136E17E003BB095 /* AuthSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSwitcher.swift; sourceTree = "<group>"; };
 		7BC15F1F216CCFE700167954 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7BD41C09216CD663005A8A10 /* AddNewTaskScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +80,6 @@
 				762502962154E9CB0064456E /* NotesController.swift */,
 			);
 			path = NotesController;
-			sourceTree = "<group>";
-		};
-		764B05D7215A4AB4001F14A8 /* AddPointTimeLine */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AddPointTimeLine;
 			sourceTree = "<group>";
 		};
 		76A536522133C7B9003978C2 = {
@@ -118,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				76D9C294213593B8005599C1 /* Screens */,
-				76D9C2932135938D005599C1 /* Models */,
 				76D9C29221359386005599C1 /* Services */,
 				76A536772133DCB3003978C2 /* Utilities */,
 				76A5365E2133C7B9003978C2 /* AppDelegate.swift */,
@@ -191,17 +185,9 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		76D9C2932135938D005599C1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		76D9C294213593B8005599C1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				764B05D7215A4AB4001F14A8 /* AddPointTimeLine */,
 				76FCE066213EB29100CA57E9 /* TimeLineScreen */,
 				76A536722133CFB1003978C2 /* Authorization */,
 			);
@@ -211,6 +197,7 @@
 		76FCE066213EB29100CA57E9 /* TimeLineScreen */ = {
 			isa = PBXGroup;
 			children = (
+				7BD41C08216CD638005A8A10 /* AddNewTaskScreen */,
 				762502952154E9900064456E /* NotesController */,
 				76FCE069213EB30000CA57E9 /* TimeLineController */,
 				76FCE06C213EB6AD00CA57E9 /* CustomCell */,
@@ -233,6 +220,14 @@
 				76FCE06D213EB6C600CA57E9 /* TimeLineCell.swift */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		7BD41C08216CD638005A8A10 /* AddNewTaskScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7BD41C09216CD663005A8A10 /* AddNewTaskScreen.swift */,
+			);
+			path = AddNewTaskScreen;
 			sourceTree = "<group>";
 		};
 		BBBD2D0604F768495833E87C /* Pods */ = {
@@ -279,6 +274,7 @@
 				TargetAttributes = {
 					76A5365A2133C7B9003978C2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -392,6 +388,7 @@
 				762502972154E9CB0064456E /* NotesController.swift in Sources */,
 				76D9C29021357C21005599C1 /* Config.swift in Sources */,
 				76FCE06B213EB33A00CA57E9 /* TimeLineController.swift in Sources */,
+				7BD41C0A216CD663005A8A10 /* AddNewTaskScreen.swift in Sources */,
 				76A536762133DB74003978C2 /* LoginScreen.swift in Sources */,
 				76D9C29621359AC0005599C1 /* RegistrationScreen.swift in Sources */,
 				76A5367B2133E026003978C2 /* R.generated.swift in Sources */,
@@ -561,7 +558,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ka.TimeLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -580,7 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ka.TimeLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
