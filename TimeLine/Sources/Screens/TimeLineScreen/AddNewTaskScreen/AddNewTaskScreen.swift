@@ -9,33 +9,29 @@
 import UIKit
 
 class AddNewTaskScreen: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var taskNameLabel: UITextField!
-    @IBOutlet weak var countCharLabel: UILabel!
+    @IBOutlet weak var taskName: UITextField!
+    @IBOutlet var countCharName: UILabel!
+    @IBOutlet var countCharDescription: UILabel!
+    @IBOutlet weak var taskDescription: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        taskNameLabel.delegate = self
+        taskName.delegate = self
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        showCount()
+        showCountFor(textField: taskName, label: countCharName, length: 50)
+        showCountFor(textField: taskDescription, label: countCharDescription, length: 120)
     }
     
-    
-    func showCount() {
-        countCharLabel.text = "\(String(describing: taskNameLabel.text!.count) + "/50")"
-        
-        if (self.taskNameLabel.text?.count)! < 30 {
-            self.countCharLabel.isHidden = true
+    func showCountFor(textField: UITextField, label: UILabel, length: Int) {
+        label.text = "\(String(describing: textField.text!.count) + "/\(length)")"
+        textField.text?.lineRange(for: 2)
+        if (textField.text?.count)! < 30{
+            label.isHidden = true
         } else {
-            self.countCharLabel.isHidden = false
+            label.isHidden = false
         }
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if (taskNameLabel.text?.count)! >= 50 {
-            return false
-        }
-        return true
     }
 }
+

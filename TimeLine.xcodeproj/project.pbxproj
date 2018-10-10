@@ -23,6 +23,7 @@
 		76FCE06E213EB6C600CA57E9 /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FCE06D213EB6C600CA57E9 /* TimeLineCell.swift */; };
 		76FD49892136D954003BB095 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD49882136D954003BB095 /* AuthService.swift */; };
 		76FD498B2136E17E003BB095 /* AuthSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD498A2136E17E003BB095 /* AuthSwitcher.swift */; };
+		7B9A60C7216E0FC600B931B0 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9A60C6216E0FC600B931B0 /* UITextFieldExtension.swift */; };
 		7BC15F20216CCFE800167954 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BC15F1E216CCFE700167954 /* Localizable.strings */; };
 		7BD41C0A216CD663005A8A10 /* AddNewTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD41C09216CD663005A8A10 /* AddNewTaskScreen.swift */; };
 		B54DB7D2F3349E549E0CC859 /* Pods_TimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15348E70034D469268B8C533 /* Pods_TimeLine.framework */; };
@@ -50,6 +51,7 @@
 		76FCE06D213EB6C600CA57E9 /* TimeLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
 		76FD49882136D954003BB095 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		76FD498A2136E17E003BB095 /* AuthSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSwitcher.swift; sourceTree = "<group>"; };
+		7B9A60C6216E0FC600B931B0 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		7BC15F1F216CCFE700167954 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7BD41C09216CD663005A8A10 /* AddNewTaskScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				764B05D5215A2439001F14A8 /* Array-Extension.swift */,
+				7B9A60C6216E0FC600B931B0 /* UITextFieldExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				76A5365F2133C7B9003978C2 /* AppDelegate.swift in Sources */,
 				762502972154E9CB0064456E /* NotesController.swift in Sources */,
 				76D9C29021357C21005599C1 /* Config.swift in Sources */,
+				7B9A60C7216E0FC600B931B0 /* UITextFieldExtension.swift in Sources */,
 				76FCE06B213EB33A00CA57E9 /* TimeLineController.swift in Sources */,
 				7BD41C0A216CD663005A8A10 /* AddNewTaskScreen.swift in Sources */,
 				76A536762133DB74003978C2 /* LoginScreen.swift in Sources */,
