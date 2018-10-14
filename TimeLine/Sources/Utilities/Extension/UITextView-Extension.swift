@@ -9,33 +9,7 @@
 import Foundation
 import UIKit
 
-extension UITextView{
-    
-    func setPlaceholder() {
-        
-        let placeholderLabel = UILabel()
-        placeholderLabel.text = "Enter some text..."
-        placeholderLabel.font = UIFont.italicSystemFont(ofSize: (self.font?.pointSize)!)
-        placeholderLabel.sizeToFit()
-        placeholderLabel.tag = 222
-        placeholderLabel.frame.origin = CGPoint(x: 5, y: (self.font?.pointSize)! / 2)
-        placeholderLabel.textColor = UIColor.lightGray
-        placeholderLabel.isHidden = !self.text.isEmpty
-        
-        self.addSubview(placeholderLabel)
-    }
-    
-    func checkPlaceholder() {
-        let placeholderLabel = self.viewWithTag(222) as! UILabel
-        placeholderLabel.isHidden = !self.text.isEmpty
-    }
-    
-}
-
-//yourTextView.placeholder = "Task Description"
-
-extension UITextView :UITextViewDelegate
-{
+extension UITextView :UITextViewDelegate {
     
     /// Resize the placeholder when the UITextView bounds change
     override open var bounds: CGRect {
