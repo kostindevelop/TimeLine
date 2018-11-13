@@ -14,13 +14,8 @@ class AuthSwitcher {
     
     static func choiseRootVC() {
         let loggedIn = UserDefaults.standard.bool(forKey: keyLogedIn)
-        var rootVC: UIViewController
+        let rootVC = loggedIn ? R.storyboard.timeLine.timeLineScreen()! : R.storyboard.auth.loginScreen()!
         
-        if loggedIn {
-            rootVC = R.storyboard.timeLine.timeLineScreen()!
-        } else {
-            rootVC = R.storyboard.auth.loginScreen()!
-        }
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = rootVC
